@@ -1,87 +1,106 @@
-/* General Reset */
-body {
+/* Reset basic spacing */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and general style */
+body {
   font-family: Arial, sans-serif;
-  background-color: #4B3B60; /* muted deep lilac-purple */
-  color: #f2f2f2;
-  line-height: 1.6;
+  background-color: #5a3e6f; /* lilac-purple, dark but not too dark */
+  color: #f5f5f5; /* light grey text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+  padding: 20px;
 }
 
 /* Header */
 header {
-  background-color: #2E243D;
-  color: #E6DAF0;
   text-align: center;
-  padding: 1.5rem;
+  margin-bottom: 20px;
 }
 
-/* Sections */
-section {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #3B2C4F;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+header h1 {
+  color: magenta;
+  margin-bottom: 10px;
 }
 
-/* Labels */
+/* Intro section */
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form section */
+.form-section {
+  background-color: #3c2b47; /* darker purple-grey */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 label {
-  font-weight: bold;
   display: block;
-  margin-top: 1rem;
+  margin: 10px 0 5px;
 }
 
-/* Inputs */
-input[type="number"],
-button {
-  display: block;
+input[type="number"] {
   width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.6rem;
-  border: 1px solid #555;
+  padding: 8px;
+  border: none;
   border-radius: 5px;
-  background-color: #2E243D; /* darker input background */
-  color: #f2f2f2; /* light text */
+  background-color: #2a1f33; /* darker input field */
+  color: white;
 }
 
-/* Radio Buttons */
-.form-section p {
-  margin-top: 1rem;
-  font-weight: bold;
+input[type="number"]::placeholder {
+  color: #aaa;
 }
 
-.form-section label input[type="radio"] {
-  margin-right: 0.5rem;
+.radio-label {
+  display: inline-block;
+  margin-right: 15px;
 }
 
-.form-section label {
-  display: inline-flex; /* keeps radio and text aligned */
-  align-items: center;
-  margin-right: 1rem; /* spacing between Male/Female */
-  font-weight: normal;
+/* Buttons */
+.buttons {
+  margin-top: 15px;
 }
 
-/* Button */
 button {
-  background-color: #C71585; /* magenta */
+  background-color: magenta;
   color: white;
   border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #A0136C;
+  background-color: #d63384; /* slightly darker magenta */
+}
+
+/* Result section */
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-  background-color: #2E243D;
+  background-color: #2a1f33;
   text-align: center;
-  padding: 1rem;
-  border-top: 2px solid #666;
-  margin-top: 2rem;
-  color: #E6DAF0;
+  padding: 10px;
+  font-size: 0.9em;
 }
