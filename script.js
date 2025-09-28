@@ -38,10 +38,4 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
     ? maleNames[dayOfWeek] 
     : femaleNames[dayOfWeek];
 
-  // Step 5: Display result
-  let resultDiv = document.getElementById("result");
-  resultDiv.textContent = `You were born on a ${daysOfWeek[dayOfWeek]}. Your Akan name is ${akanName}.`;
-
-  // Step 6: Clear form after showing result
-  document.getElementById("akanForm").reset();
 });
