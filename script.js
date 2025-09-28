@@ -1,14 +1,14 @@
-// Step 1: Wait for the form to be submitted
+//Wait for the form to be submitted
 document.getElementById("akanForm").addEventListener("submit", function(event) {
   event.preventDefault(); // Stop page from refreshing
 
-  // Step 2: Get input values from the form
+  //Get input values from the form
   let day = parseInt(document.getElementById("day").value);
   let month = parseInt(document.getElementById("month").value);
   let year = parseInt(document.getElementById("year").value);
   let gender = document.querySelector('input[name="gender"]:checked');
 
-  // Step 3: Validate inputs
+  //Validate inputs
   if (isNaN(day) || isNaN(month) || isNaN(year)) {
     alert("Please enter a valid day, month, and year.");
     return;
@@ -26,7 +26,7 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
     return;
   }
 
-  // Step 4: Calculate the day of the week
+  //Calculate the day of the week
   // JavaScript's Date object: months start at 0 (Jan = 0, Dec = 11)
   let date = new Date(year, month - 1, day);
   let dayOfWeek = date.getDay(); // Sunday = 0, Monday = 1, ... Saturday = 6
@@ -36,20 +36,20 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
   let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  // Step 5: Choose Akan name based on gender
+  //Choose Akan name based on gender
   let akanName = (gender.value === "male") 
     ? maleNames[dayOfWeek] 
     : femaleNames[dayOfWeek];
 
-  // Step 6: Display result on page
+  //Display result on page
   let resultDiv = document.getElementById("result");
   resultDiv.textContent = `You were born on a ${daysOfWeek[dayOfWeek]}. Your Akan name is ${akanName}.`;
 
-  // Step 7: Clear form after showing result
+  // Clear form after showing result
   document.getElementById("akanForm").reset();
 });
 
-// Step 8: Function for Clear button (to also remove result)
+// Function for Clear button (to also remove result)
 function clearResult() {
   document.getElementById("akanForm").reset();
   document.getElementById("result").textContent = "";
