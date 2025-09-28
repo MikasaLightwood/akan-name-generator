@@ -7,6 +7,15 @@ Author
 
 Esther Gathatwa
 
+Project Structure
+
+akan-name-generator/
+│
+├── index.html      # The main webpage
+├── styles.css      # Styles for the webpage
+├── script.js       # JavaScript logic for name generation
+└── README.md       # Documentation
+
 How It Works
 
 Enter your day, month, and year of birth.
