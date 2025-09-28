@@ -27,22 +27,30 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
   }
 
   // Step 4: Calculate the day of the week
-  let date = new Date(year, month - 1, day); // JS months are 0-11
-  let dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
+  // JavaScript's Date object: months start at 0 (Jan = 0, Dec = 11)
+  let date = new Date(year, month - 1, day);
+  let dayOfWeek = date.getDay(); // Sunday = 0, Monday = 1, ... Saturday = 6
 
+  // Akan names for each day
   let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+  // Step 5: Choose Akan name based on gender
   let akanName = (gender.value === "male") 
     ? maleNames[dayOfWeek] 
     : femaleNames[dayOfWeek];
 
-      // Step 5: Display result
+  // Step 6: Display result on page
   let resultDiv = document.getElementById("result");
   resultDiv.textContent = `You were born on a ${daysOfWeek[dayOfWeek]}. Your Akan name is ${akanName}.`;
 
-  // Step 6: Clear form after showing result
+  // Step 7: Clear form after showing result
   document.getElementById("akanForm").reset();
-
 });
+
+// Step 8: Function for Clear button (to also remove result)
+function clearResult() {
+  document.getElementById("akanForm").reset();
+  document.getElementById("result").textContent = "";
+}
