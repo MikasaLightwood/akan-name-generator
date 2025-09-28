@@ -1,41 +1,87 @@
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  min-height: 100vh;              /* full height of the screen */
-  display: flex;
-  flex-direction: column;         /* stack header, main, footer */
-  background-color: #f5f5f5;      /* light grey background */
-  color: #333;
+  background-color: #4B3B60; /* muted deep lilac-purple */
+  color: #f2f2f2;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: magenta;
-  color: white;
+  background-color: #2E243D;
+  color: #E6DAF0;
   text-align: center;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
-header h1 {
-  margin-bottom: 10px;
+/* Sections */
+section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #3B2C4F;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Main */
-main {
-  flex: 1;                        /* take all available space */
-  padding: 20px;
+/* Labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
 }
 
-/* Intro Section */
-.intro {
-  margin-bottom: 20px;
-  background-color: #e6ccff;      /* lilac */
-  padding: 15px;
+/* Inputs */
+input[type="number"],
+button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border: 1px solid #555;
   border-radius: 5px;
+  background-color: #2E243D; /* darker input background */
+  color: #f2f2f2; /* light text */
+}
+
+/* Radio Buttons */
+.form-section p {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.form-section label input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.form-section label {
+  display: inline-flex; /* keeps radio and text aligned */
+  align-items: center;
+  margin-right: 1rem; /* spacing between Male/Female */
+  font-weight: normal;
+}
+
+/* Button */
+button {
+  background-color: #C71585; /* magenta */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #A0136C;
+}
+
+/* Footer */
+footer {
+  background-color: #2E243D;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #666;
+  margin-top: 2rem;
+  color: #E6DAF0;
 }
