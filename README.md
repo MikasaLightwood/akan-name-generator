@@ -1,1 +1,0 @@
-# akan-name-generator
