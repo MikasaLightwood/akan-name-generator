@@ -97,6 +97,14 @@ button:hover {
   font-weight: bold;
 }
 
+.highlight {
+  background-color: #d8b4fe; /* lilac highlight */
+  color: #000; /* black text */
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 /* Footer */
 footer {
   background-color: #2a1f33;
