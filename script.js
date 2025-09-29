@@ -65,7 +65,7 @@ if (day > daysInMonth[month - 1]) {
 
   //Display result on page
   let resultDiv = document.getElementById("result");
-  resultDiv.textContent = `You were born on a ${daysOfWeek[dayOfWeek]}. Your Akan name is ${akanName}.`;
+  resultDiv.innerHTML = `You were born on a <span class="highlight">${daysOfWeek[dayOfWeek]}</span>. Your Akan name is <span class="highlight">${akanName}</span>.`;
 
   // Clear form after showing result
   document.getElementById("akanForm").reset();
