@@ -31,8 +31,6 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
     return;
   }
 
-  //Validate inputs (after your basic day/month/year check)
-
 // Function to check if a year is a leap year
 function isLeapYear(year) {
   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
