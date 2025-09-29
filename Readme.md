@@ -7,18 +7,20 @@ Author
 
 Esther Gathatwa
 
+
 Project Structure
 
 akan-name-generator
 
 
-index.html      # The main webpage
+index.html        # The main webpage
 
-styles.css      # Styles for the webpage
+styles.css        # Styles for the webpage
 
-script.js       # JavaScript logic for name generation
+script.js         # JavaScript logic for name generation
 
-README.md       # Documentation
+README.md         # Documentation
+
 
 How It Works
 
@@ -29,6 +31,7 @@ Select your gender.
 Click "Get Akan Name".
 
 The app will display the day of the week you were born and your corresponding Akan name.
+
 
 Technologies Used
 
