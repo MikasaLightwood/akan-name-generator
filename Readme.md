@@ -1,15 +1,15 @@
 Akan Name Generator
 
-Description
+1.Description
 
   -A web-based application called the Akan Name Generator determines the day of the week you were born and provides you with your traditional Ghanaian Akan name.  The names are determined by the individual's gender and the day of their birth.
 
-Author
+2.Author
 
   -Esther Gathatwa
 
 
-Project Structure
+3.Project Structure
 
    -akan-name-generator
 
@@ -23,7 +23,7 @@ Project Structure
    -README.md         # Documentation
 
 
-How It Works
+4.How It Works
 
   -Enter your day, month, and year of birth.
 
@@ -34,7 +34,7 @@ How It Works
   -The app will display the day of the week you were born and your corresponding Akan name.
 
 
-Technologies Used
+5.Technologies Used
 
   -HTML
 
@@ -42,6 +42,6 @@ Technologies Used
 
   -JavaScript
 
-License
+6.License
 
   © 2025 Esther Gathatwa. For academic purposes only.
