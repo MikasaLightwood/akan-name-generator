@@ -8,6 +8,11 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
   let year = parseInt(document.getElementById("year").value);
   let gender = document.querySelector('input[name="gender"]:checked');
 
+  console.log("Day entered:", day);
+  console.log("Month entered:", month);
+  console.log("Year entered:", year);
+  console.log("Gender selected:", gender ? gender.value : "None");
+
   //Validate inputs
   if (isNaN(day) || isNaN(month) || isNaN(year)) {
     alert("Please enter a valid day, month, and year.");
@@ -31,6 +36,8 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
   let date = new Date(year, month - 1, day);
   let dayOfWeek = date.getDay(); // Sunday = 0, Monday = 1, ... Saturday = 6
 
+  console.log("Calculated day of week (0=Sun...6=Sat):", dayOfWeek);
+
   // Akan names for each day
   let maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
@@ -40,6 +47,8 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
   let akanName = (gender.value === "male") 
     ? maleNames[dayOfWeek] 
     : femaleNames[dayOfWeek];
+
+  console.log("Akan Name generated:", akanName);
 
   //Display result on page
   let resultDiv = document.getElementById("result");
