@@ -31,6 +31,21 @@ document.getElementById("akanForm").addEventListener("submit", function(event) {
     return;
   }
 
+  //Validate inputs (after your basic day/month/year check)
+
+// Function to check if a year is a leap year
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+// Days in each month
+let daysInMonth = [31, (isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+if (day > daysInMonth[month - 1]) {
+  alert(`The month you selected only has ${daysInMonth[month - 1]} days.`);
+  return;
+}
+
   //Calculate the day of the week
   // JavaScript's Date object: months start at 0 (Jan = 0, Dec = 11)
   let date = new Date(year, month - 1, day);
